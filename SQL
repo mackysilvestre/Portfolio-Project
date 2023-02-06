@@ -1,7 +1,14 @@
+--- Selecting the table --- 
 
+SELECT *
+FROM [Leading Causes of Death]
+
+--- Getting the Sum --- 
 
 SELECT SUM([2021]) as Sumof2021
 FROM [Leading Causes of Death]
+
+--- Getting the Percentage  --- 
 
 SELECT [Cause of Death], [2021], ([2021]/287954)*100 as DeathPercentage2021
 FROM [Leading Causes of Death]
