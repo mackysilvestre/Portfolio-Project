@@ -8,7 +8,44 @@ FROM [Leading Causes of Death]
 SELECT SUM([2021]) as Sumof2021
 FROM [Leading Causes of Death]
 
---- Getting the Percentage  --- 
+SELECT SUM([2020]) as Sumof2020
+FROM [Leading Causes of Death]
+
+--- Getting the Percentage of Death per Illness --- 
 
 SELECT [Cause of Death], [2021], ([2021]/287954)*100 as DeathPercentage2021
 FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2021
+
+SELECT [Cause of Death], [2020], ([2020]/276486)*100 as DeathPercentage2020
+FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2020
+
+SELECT [Cause of Death], [2020], [2021], ([2020]/276486)*100 as DeathPercentage2020, 
+([2021]/287954)*100 as DeathPercentage2021
+FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2020
+
+--- Getting the Top Leading Causes of Death ---
+
+SELECT [Cause of Death], [2021], ([2021]/287954)*100 as DeathPercentage2021
+FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2021 DESC
+
+SELECT [Cause of Death], [2020], ([2020]/276486)*100 as DeathPercentage2020
+FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2020 DESC
+
+SELECT [Cause of Death], [2020], [2021], ([2020]/276486)*100 as DeathPercentage2020, 
+([2021]/287954)*100 as DeathPercentage2021
+FROM [Leading Causes of Death]
+ORDER BY DeathPercentage2020 DESC
+
+--- Updating the Table ---
+- Inserting New Values to the Table -
+
+SELECT *
+FROM [Leading Causes of Death]
+
+INSERT INTO [Leading Causes of Death] VALUES
+('Total', 287954, 276486)
