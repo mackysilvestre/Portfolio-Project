@@ -1,0 +1,28 @@
+Name = input("Please enter your name here: ")
+
+Weight = int(input("Please put your weight in pounds/lbs here: "))
+
+Height = int(input("Please put your height in inches here: "))
+
+BMI = (Weight * 703) / (Height * Height)
+
+print(BMI)
+
+if BMI > 0:
+    if(BMI<18.5):
+        print(Name + ", you are Underweight.")
+    elif(BMI<=24.9):
+        print(Name + ", you are Healthy.")
+    elif(BMI<=29.9):
+        print(Name + ", you are Overweight. You need more exercise.")
+    elif(BMI>=30):
+        print(Name + ", you are Obese. You need to consult your doctor.")
+    else: 
+        print("Please put valid entry.")
+        
+        
+Below 18.5	Underweight
+18.5 – 24.9	Healthy Weight
+25.0 – 29.9	Overweight
+30.0 and Above	Obesity
+https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted
