@@ -1,3 +1,5 @@
+print("Welcome to the BMI Calculator!")
+
 Name = input("Please enter your name here: ")
 
 Weight = int(input("Please put your weight in pounds/lbs here: "))
@@ -25,4 +27,4 @@ Below 18.5	Underweight
 18.5 – 24.9	Healthy Weight
 25.0 – 29.9	Overweight
 30.0 and Above	Obesity
-https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted
+#https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted
